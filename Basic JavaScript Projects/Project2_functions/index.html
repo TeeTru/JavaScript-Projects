@@ -8,13 +8,10 @@
     <script src="JS/main.js"></script>
 </head>
 <body>
-    <p>Click the button to display the date.</p>
-    <button onclick="dispayDate()">The time is?</button>
-    <script>
-        function dispayDate() {
-            document.getElementById("demo").innerHTML = Date();
-        }
-    </script>
-    <p id="demo"></p>
+    <button onclick="My_First_Function()" id="Button_Text">
+        Click me!
+    </button>
+    <p id="Button_Text" onclick="My_First_Function()">Hello!</p>
+    <p id="Concatenate" onclick="myFunction()">Click here!</p>
 </body>
 </html>
