@@ -58,7 +58,7 @@ function constant_function() {      //the "const keyword" creates a scope that c
 }                                    //this will display "the cost of the blue car was $35,000"
 
 //RETURN STATEMENT
-let x = myFunction(12,               //the "return" statement stops the execution of a function and returns the value
+let x = myFunction(12, 10);             //the "return" statement stops the execution of a function and returns the value
 document.getElementById("Return").innerHTML = x;
 function myFunction(a, b) {
     return a * b;                   //this will display "120"
