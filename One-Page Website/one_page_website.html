@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>4Runner Adventures</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="./CSS/one_page_website.css">
+		<script src="JS/one_page_website.js" defer></script>
+	</head>
+	<body>
+			<!-- NAV -->
+		<div>
+			<div>
+				<ul>
+					<a href="#home" id="link"><li>HOME</li></a>
+					<a href="#video"><li>VIDEO</li></a>
+					<a href="#gallery"><li>GALLERY</li></a>
+					<a href="#contact"><li>RESERVATIONS</li></a>
+				</ul>
+			</div>
+		</div>
+		<!-- END NAV -->
+		
+		<!--HOME -->
+		<div id="home">
+			<div>
+				<img src="./Images/Thumbnail/4runner_image_1.jpg" alt="4Runner red">
+				<div>
+					<span>4Runner Adventures</span>
+				</div>
+			</div>
+		</div>
+		<!--END HOME -->
+
+		<!-- Video-CONTAINER-CONTAINER 1 -->
+		<section>
+			<div id="video">
+			
+				<p>Check out this video and see what you can expect!</p>
+					
+				<iframe width="420" height="345" src="https://www.youtube.com/embed/j6oLhEbdS5c" allowfullscreen ng-show="showvideo"></iframe>
+			</div>				
+		</section>			
+					<!-- END Video-CONTAINER 1 -->
+
+					<!-- Images used to open the lightbox -->
+			<section>
+				<div id="gallery">
+					<h1>Gallery</h1>
+					<div class="row">
+						<div class="column">
+							<img src="./Images/Thumbnail/4runner_image.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img src="./Images/Thumbnail/4runner_image_2.jpg" style="width:100%" onabort="openModal();currentSlide(2)" class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img src="./Images/Thumbnail/4runner_image_3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img src="./Images/Thumbnail/4runner_image_4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img src="./Images/Thumbnail/4runner_image_5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img src="./Images/Thumbnail/4runner_image_6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img src="./Images/Thumbnail/4runner_image_7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img src="./Images/Thumbnail/4runner_image_8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img src="./Images/Thumbnail/4runner_image_9.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+						</div>
+					</div>
+
+					<!-- THe Modal/Lightbox -->
+					<div id="myModal" class="modal">
+						<span class="close cursor" onclick="closeModal()">&times;</span>
+						<div class="modal-content">
+
+							<div class="mySlides">
+								<div class="numbertext">1 / 9</div>
+								<img src="./Images/Thumbnail/4runner_image.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">2 / 9</div>
+								<img src="./Images/Thumbnail/4runner_image_2.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">3 / 9</div>
+								<img src="./Images/Thumbnail/4runner_image_3.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">4 / 9</div>
+								<img src="./Images/Thumbnail/4runner_image_4.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">5 / 9</div>
+								<img src="./Images/Thumbnail/4runner_image_5.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">6 / 9</div>
+								<img src="./Images/Thumbnail/4runner_image_6.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">7 / 9</div>
+								<img src="./Images/Thumbnail/4runner_image_7.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">8 / 9</div>
+								<img src="./Images/Thumbnail/4runner_image_8.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">9 / 9</div>
+								<img src="./Images/Thumbnail/4runner_image_9.jpg" style="width:100%">
+							</div>
+
+							<!-- Next/previous controls -->
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+							<!-- caption text -->
+							<div class="caption-container">
+								<p id="caption"></p>
+							</div>
+
+							<!-- Thumbnail image controls -->
+							<div class="column">
+								<img class="demo" src="./Images/Thumbnail/4runner_image.jpg" onclick="currentSlide(1)" alt="4Runner">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./Images/Thumbnail/4runner_image_2.jpg" onclick="currentSlide(2)" alt="4Runner">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./Images/Thumbnail/4runner_image_3.jpg" onclick="currentSlide(3)" alt="4Runner">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./Images/Thumbnail/4runner_image_4.jpg" onclick="currentSlide(4)" alt="4Runner">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./Images/Thumbnail/4runner_image_5.jpg" onclick="currentSlide(5)" alt="4Runner">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./Images/Thumbnail/4runner_image_6.jpg" onclick="currentSlide(6)" alt="4Runner">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./Images/Thumbnail/4runner_image_7.jpg" onclick="currentSlide(7)" alt="4Runner">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./Images/Thumbnail/4runner_image_8.jpg" onclick="currentSlide(8)" alt="4Runner">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./Images/Thumbnail/4runner_image_9.jpg" onclick="currentSlide(9)" alt="4Runner">
+							</div>
+						</div>
+					</div>	
+				</div>
+			</section>
+
+				<!-- GALLERY -->
+			<section>
+				<div id="gallery">
+					<h1>Gallery</h1>
+					<div>				
+						<!-- PHOTO-CONTAINER 1 -->
+						<div>
+							<div>
+								<img src="./Images/Thumbnail/4runner_image.jpg" alt="4Runner">
+								<div>
+									<h3>Click to Enlarge</h3>
+									<p>This could be you! Start your 4Runner adventure today!</p> 
+								</div>
+							</div>
+						</div>
+						<!-- END PHOTO-CONTAINER 1 -->
+						
+						<!-- PHOTO-CONTAINER 2 -->
+						<div>
+							<div>
+								<img src="./Images/Thumbnail/4runner_image_2.jpg" alt="4Runner">
+								<div>
+									<h3>Click to Enlarge</h3>
+									<p>This could be you! Start your 4Runner adventure today!</p> 
+								</div>
+							</div>
+						</div>
+						<!-- END PHOTO-CONTAINER 2 -->
+						
+						<!-- PHOTO-CONTAINER 3 -->
+						<div>
+							<div>
+								<img src="./Images/Thumbnail/4runner_image_3.jpg" alt="4Runner">
+								<div>
+									<h3>Click to Enlarge</h3>
+									<p>This could be you! Start your 4Runner adventure today!</p> 
+								</div>
+							</div>
+						</div>
+						<!-- END PHOTO-CONTAINER 3 -->
+						
+						<!-- PHOTO-CONTAINER 4 -->
+						<div>
+							<div>
+								<img src="./Images/Thumbnail/4runner_image_4.jpg" alt="4Runner">
+								<div>
+									<h3>Click to Enlarge</h3>
+									<p>This could be you! Start your 4Runner adventure today!</p> 
+								</div>
+							</div>
+						</div>
+						<!-- END PHOTO-CONTAINER 4 -->
+						
+						<!-- PHOTO-CONTAINER 5 -->
+						<div>
+							<div>
+								<img src="./Images/Thumbnail/4runner_image_5.jpg" alt="4Runner">
+								<div>
+									<h3>Click to Enlarge</h3>
+									<p>This could be you! Start your 4Runner adventure today!</p> 
+								</div>
+							</div>
+						</div>
+						<!-- END PHOTO-CONTAINER 5 -->
+						
+						<!-- PHOTO-CONTAINER 6 -->
+						<div>
+							<div>
+								<img src="./Images/Thumbnail/4runner_image_6.jpg" alt="4Runner">
+								<div>
+									<h3>Click to Enlarge</h3>
+									<p>This could be you! Start your 4Runner adventure today!</p> 
+								</div>
+							</div>
+						</div>
+						<!-- END PHOTO-CONTAINER 6 -->
+						
+						<!-- PHOTO-CONTAINER 7 -->
+						<div>
+							<div>
+								<img src="./Images/Thumbnail/4runner_image_7.jpg" alt="4Runner">
+								<div>
+									<h3>Click to Enlarge</h3>
+									<p>This could be you! Start your 4Runner adventure today!</p> 
+								</div>
+							</div>
+						</div>
+						<!-- END PHOTO-CONTAINER 7 -->
+						
+						<!-- PHOTO-CONTAINER 8 -->
+						<div>
+							<div>
+								<img src="./Images/Thumbnail/4runner_image_8.jpg" alt="4Runner">
+								<div>
+									<h3>Click to Enlarge</h3>
+									<p>This could be you! Start your 4Runner adventure today!</p> 
+								</div>
+							</div>
+						</div>
+						<!-- END PHOTO-CONTAINER 8 -->
+						
+						<!-- PHOTO-CONTAINER 9 -->
+						<div>
+							<div>
+								<img src="./Images/Thumbnail/4runner_image_9.jpg" alt="4Runner">
+								<div>
+									<h3>Click to Enlarge</h3>
+									<p>This could be you! Start your 4Runner adventure today!</p> 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>			
+					<!-- END PHOTO-CONTAINER 9 -->
+
+					<!-- RSVP -->
+		<section>
+			<div id="contact">
+				<div>
+					<h1>Reservations</h1>
+					<div class="reservation">
+						<h2><span>Your adventure is just around the mountain.</span>
+							<br />Reserve today!
+						</h2>
+						<p>
+							Please provide us with your basic contact information.
+						</p>
+						<div>
+							<form action="" method="post">
+								<input class="rsvp" type="text" value="First Name">
+								<input class="rsvp" type="text" value="Last Name">
+								<input class="rsvp" type="text" value="Email Address">
+								<input class="rsvp" type="text" value="Phone Number">
+								<div class="form-spacer">	
+									<label class="terms">Terms and Conditions</label>
+								</div>
+								<div>
+									<input type="submit" value="Submit">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--END RSVP -->
+					
+							<!--FOOTER -->
+		<div>
+			<ul>
+			(801) 979-1264<br>
+			5400 S State St, Murray, UT 84123<br>
+			www.4runneradventures.com &nbsp;|&nbsp; &copy; 2022
+			</ul>
+		</div>
+		<!-- END FOOTER -->
+	</body>
+</html>
