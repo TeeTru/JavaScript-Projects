@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="react.js"></script>
+    <script src="react-dom.js"></script>
+</head>
+    <body>
+        <div id="My_React_Code"></div>
+        <script>
+            //React.createClass creates component classes
+            //"components" are JavaScript functions or classes that can accept input
+            var Counter = React.createClass({
+                //"render" transfers components into DOM nodes so the browser can understand
+                render: function() {
+                    //"props" are abbreviations for properties
+                    var time_Passed = Math.round(this.props.time_Passed  / 100);
+                    //"%" finds the remainder
+                    //"?" is az conditional operator that checks for whether or not a condition is true 
+                    //":" is shorthand for "else"
+                    var seconds_Passed = time_Passed / 10 + (time_Passed % 10 ? '' : '.0' );
+                    var text = 'My React code started running ' +
+                        seconds_Passed + ' seconds ago!';
+                    return React.DOM.p(null, text);
+                }
+            })
+
+            //React.createFactory is a function that generates a factory (object that can create other objects)
+            var counter_Factory = React.createFactory(Counter);
+
+            var start_Counting = new Date().getTime();
+            //setInterval() is a method that evaluates and expression at specified intervals (milliseconds)
+            setInterval(function() {
+                ReactDOM.render(
+                    counter_Factory({time_Passed: new Date().getTime() - start_Counting}),
+                    document.getElementById('My_React_Code')
+                );
+            }, 50);
+        </script>
+    </body>
+</html>

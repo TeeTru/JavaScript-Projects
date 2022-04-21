@@ -7,7 +7,21 @@
     <title>Document</title>
     <script src="./JS/JavaScript_3.js"></script>
 </head>
+<style>
+    body {
+        opacity: 1;
+        transition: 1s opacity;
+    }
+
+    body.fade-out {
+        opacity: 0;
+        transition: none;
+    }
+</style>
 <body>
+    <script>
+        document.body.classList.add('fade-out');
+    </script>
     <!-- HTML DATA ATTRIBUTE -->
     <ol> 
         <li data-family_relation ="father">Jose</li>
@@ -15,7 +29,7 @@
         <li data-family_relation="sister">Shelissa</li>
     </ol>
 
-    <h1>State Capitals</h1>
+    <h1 style="font-size:10vw;">State Capitals</h1>
     <h3>Click on a state to see the capital city!</h3>
 
     <ul>

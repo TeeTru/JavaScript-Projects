@@ -10,16 +10,69 @@
 </head>
 <body>
     <h2>Fill out the form</h2>
+    <div class="main" id="section1">
+        <a href="#section2">Click here to scroll to bottom form</a>
+        <form name="myForm" onsubmit="return validateForm()" method="post">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value=""><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value=""><br>
+            <label for="phonenumber">Phone Number:</label><br>
+            <input type="text" id="phonenumber" name="phonenumber" value=""><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 
-    <form name="myForm" onsubmit="return validateForm()" method="post">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" value=""><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value=""><br>
-        <label for="email">Email:</label><br>
-        <input type="text" id="email" name="email" value=""><br>
-        <input type="submit" value="Submit">
-    </form>
-    
+        <br>
+        <img class="sunset" src="./IMG/R.jpg" width="300" height="200" alt="sunset">
+        <br>
+        <br>
+        <h1>Click the link</h1>
+
+        <p><a href="https://www.google.com/">Visit Google for no reason!</a></p>
+        <br>
+        <br>
+    <hr>
+    <section>
+        <div id="slideshow" style="align-content: center;">
+            <div>
+                <img src="./IMG/Sunset.jpg" width="500" height="400">
+            </div>
+            <div>
+                <img src="./IMG/sunset1.jpg" width="500" height="400">
+            </div>
+            <div>
+                Sunsets are amazing!
+            </div>
+        </div>
+    </section>    
+        <br>
+        <br>
+    <section>
+        <hr>
+            <h2>Popup Form</h2>
+            <p>Click on the button at the bottom of this page to open the login form.</p>
+            
+            
+            <button class="open-button" onclick="openForm()">Open Form</button>
+
+        <div class="main" id="section2">  
+            <a href="#section1">Click here to scroll to the top of page</a>  
+            <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                    <h1>Login</h1>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="text" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit" class="btn">Login</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
